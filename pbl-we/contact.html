@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+        body {
+            font-family: 'Poppins', sans-serif;
+           
+            background:rgb(32, 87, 129);
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 50px;
+        }
+        .contact-form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+            transition: transform 0.3s;
+        }
+        .contact-form:hover {
+            transform: scale(1.05);
+        }
+        input, textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #6200ea;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #3700b3;
+        }
+        footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📞 Contact Me</h1>
+    </header>
+
+    <section class="contact-form">
+        <h2>Get in Touch</h2>
+        <p><strong>Email:</strong> <a href="mailto:kanzuliman2k21@gmail.com">kanzuliman2k21@gmail.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/kanzul-iman-28108127a/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3Bqr1l1pYJQCSgbp3q%2BF%2FNoA%3D%3D" target="_blank">View Profile</a></p>
+        <p><strong>Phone:</strong> +123 456 7890</p>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Online Learning Platform</p>
+    </footer>
+</body>
+</html>

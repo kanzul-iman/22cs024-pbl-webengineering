@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            background:rgb(32, 87, 129);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Student Dashboard</h1>
+        <button id="theme-toggle">🌙 Dark Mode</button>
+    </header>
+    <nav class="sidebar">
+        <ul>
+            <li><a href="index.html" >🏠 Dashboard</a></li>
+            <li><a href="profile.html" target="_blank">👤 Profile</a></li>
+            <li><a href="courses.html" target="_blank">📚 Courses</a></li>
+            <li><a href="reminders.html" target="_blank">⏰ Reminders</a></li>
+            <li><a href="quizzes.html" target="_blank">📝 Quizzes</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h2>Welcome to Your Learning Hub!</h2>
+        <p>Track your progress, manage reminders, and achieve your learning goals.</p>
+        <button class="cta" onclick="startLearning()">Start Learning 🚀</button>
+    </section>
+
+    <section class="dashboard">
+        <h2>📊 Your Progress</h2>
+        <div class="progress-container">
+            <progress id="overall-progress" value="50" max="100"></progress>
+            <p><span id="progress-text">50%</span> Completed</p>
+        </div>
+        <button onclick="viewCourses()">View Courses</button>
+    </section>
+
+    <section class="notifications">
+        <h2>🔔 Notifications</h2>
+        <ul id="notification-list">
+            <li>📢 New course available: Advanced JavaScript</li>
+            <li>✅ You completed Web Development!</li>
+        </ul>
+    </section>
+
+    <section class="reminders">
+        <h2>⏰ Upcoming Reminders</h2>
+        <input type="text" id="reminder-text" placeholder="Enter reminder">
+        <input type="date" id="reminder-date">
+        <button onclick="setReminder()">Add Reminder</button>
+        <ul id="reminder-list"></ul>
+        
+    </section>
+
+    <section class="achievements">
+        <h2>🏆 Your Achievements</h2>
+        <div class="badges">
+            <span class="badge">🎖️ Web Dev Expert</span>
+            <span class="badge">📚 5 Courses Completed</span>
+            <span class="badge">🚀 Learning Streak: 10 Days</span>
+        </div>
+    </section>
+
+    <section class="settings">
+        <h2>⚙️ User Settings</h2>
+        <button onclick="changeTheme()">Change Theme</button>
+        <button onclick="resetProgress()">Reset Progress</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Online Learning Platform | <a href="contact.html">Contact Us</a></p>
+    </footer>
+</body>
+</html>

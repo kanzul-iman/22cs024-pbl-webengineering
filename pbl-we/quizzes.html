@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Quizzes page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+    <style>
+        body {
+            background:rgb(32, 87, 129);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📖 Online Quizzes</h1>
+    </header>
+
+    <nav class="sidebar">
+        <ul>
+            <li><a href="index.html">🏠 Dashboard</a></li>
+            <li><a href="profile.html">👤 Profile</a></li>
+            <li><a href="courses.html">📚 Courses</a></li>
+            <li><a href="reminders.html">⏰ Reminders</a></li>
+            <li><a href="quizzes.html">📝 Quizzes</a></li>
+        </ul>
+    </nav>
+
+    <div class="quiz-container">
+        <h2>Answer the Questions:</h2>
+        
+        <div class="quiz">
+            <p class="question">1. What is the capital of France?</p>
+            <div class="options">
+                <label><input type="radio" name="q1" value="Paris"> Paris</label>
+                <label><input type="radio" name="q1" value="London"> London</label>
+                <label><input type="radio" name="q1" value="Berlin"> Berlin</label>
+            </div>
+        </div>
+
+        <div class="quiz">
+            <p class="question">2. What is 2 + 2?</p>
+            <div class="options">
+                <label><input type="radio" name="q2" value="3"> 3</label>
+                <label><input type="radio" name="q2" value="4"> 4</label>
+                <label><input type="radio" name="q2" value="5"> 5</label>
+            </div>
+        </div>
+
+        <button class="btn" onclick="submitQuiz()">Submit Quiz</button>
+    </div>
+
+    <!-- Popup Result -->
+    <div id="popup">
+        <p id="popup-text"></p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Online Learning Platform</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    function submitQuiz() {
+        let score = 0;
+        let totalQuestions = 2;
+
+        let answers = {
+            q1: "Paris",
+            q2: "4"
+        };
+
+        for (let key in answers) {
+            let selectedOption = document.querySelector(`input[name="${key}"]:checked`);
+            if (selectedOption && selectedOption.value === answers[key]) {
+                score++;
+            }
+        }
+
+        showPopup(`🎉 You got ${score} out of ${totalQuestions} correct!`);
+    }
+
+    function showPopup(message) {
+        const popup = document.getElementById("popup");
+        const popupText = document.getElementById("popup-text");
+
+        popupText.innerHTML = message;
+        popup.style.display = "block";
+    }
+
+    window.closePopup = function () {
+        document.getElementById("popup").style.display = "none";
+    };
+
+    window.submitQuiz = submitQuiz;
+});
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            background:rgb(32, 87, 129);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Profile</h1>
+        <button id="theme-toggle">🌙 Dark Mode</button>
+    </header>
+
+    <nav class="sidebar">
+        <ul>
+            <li><a href="index.html">🏠 Dashboard</a></li>
+            <li><a href="profile.html">👤 Profile</a></li>
+            <li><a href="courses.html">📚 Courses</a></li>
+            <li><a href="reminders.html">⏰ Reminders</a></li>
+            <li><a href="quizzes.html">📝 Quizzes</a></li>
+        </ul>
+    </nav>
+
+    <section class="profile">
+        <img id="profilepic" src="images/kanzul.jpeg" alt="Profile Picture">
+        <input type="file" id="upload-profile" accept="image/*">
+        <h2>Welcome, Student</h2>
+    </section>
+
+    <section class="card">
+        <h2>Personal Information</h2>
+        <p><strong>Name:</strong> Kanzul Iman</p>
+        <p><strong>Email:</strong> kanzuliman2k21@gmail.com</p>
+        <p><strong>Phone:</strong> 03143584730</p>
+    </section>
+
+    <section class="card">
+        <h2>Work Experience</h2>
+        <ul>
+            <li><strong>MLSA Alpha</strong> - Student Ambassador</li>
+            <li><strong>MUET ACM Women Chapter</strong> - Member</li>
+        </ul>
+    </section>
+
+    <section class="card">
+        <h2>Skills</h2>
+        <ul>
+            <li>Python, Java, C++</li>
+            <li>Web Development (HTML, CSS, JavaScript)</li>
+            <li>Database Management (MySQL, Oracle SQL)</li>
+            <li>Machine Learning & AI</li>
+        </ul>
+    </section>
+
+    <section class="settings card">
+        <h2>Settings</h2>
+        <button id="change-password">Change Password</button>
+        <button id="update-profile">Update Profile</button>
+    </section>
+    
+
+    <footer>
+        <p>&copy; 2025 Online Learning | All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

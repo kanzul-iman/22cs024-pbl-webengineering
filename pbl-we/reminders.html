@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminders</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+    <style>
+        body {
+            background:rgb(32, 87, 129);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>⏰ Study Reminders</h1>
+        <button id="theme-toggle">🌙 Dark Mode</button>
+    </header>
+
+    <nav class="sidebar">
+        <ul>
+            <li><a href="index.html">🏠 Dashboard</a></li>
+            <li><a href="profile.html">👤 Profile</a></li>
+            <li><a href="courses.html">📚 Courses</a></li>
+            <li><a href="reminders.html">⏰ Reminders</a></li>
+            <li><a href="quizzes.html">📝 Quizzes</a></li>
+        </ul>
+    </nav>
+
+    
+    <div class="container">
+        <h2>Set a Reminder</h2>
+        <input style="height: 20px;" type="text" id="reminder-text" placeholder="Enter Reminder">
+        <input style="height: 20px;" type="datetime-local" id="reminder-datetime">
+        <button style="height: 20px;" id="add-reminder">Add Reminder</button>
+
+        <h2>📅 Your Reminders</h2>
+        <ul id="reminder-list" class="reminder-list"></ul>
+    </div>
+
+    <!-- Custom Popup Modal -->
+    <div id="popup">
+        <p id="popup-text"></p>
+    </div>
+
+    
+
+    <footer>
+        <p>&copy; 2025 Online Learning Platform | <a href="contact.html">Contact Us</a></p>
+    </footer>
+</body>
+</html>
